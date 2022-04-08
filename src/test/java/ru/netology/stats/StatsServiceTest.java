@@ -39,7 +39,7 @@ class StatsServiceTest {
 
 
     @org.junit.jupiter.api.Test
-    void shouldChoseMin() {
+    void shouldChoseMinSales() {
         StatsService service = new StatsService();
         long[] totalSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 9;
@@ -52,17 +52,17 @@ class StatsServiceTest {
     @org.junit.jupiter.api.Test
     void shouldCountMonthLowerAverage() {
         StatsService service = new StatsService();
-        long[] totalSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 0;
+        int[] totalSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 6;
 
-        int actual = service.minSales(totalSales);
+        int actual = service.monthLowerAverage(totalSales);
 
         assertEquals(expected, actual);
     }
 
 
-   @org.junit.jupiter.api.Test
-   void shouldCountMonthHigherAverage() {
+    @org.junit.jupiter.api.Test
+    void shouldCountMonthHigherAverage() {
         StatsService service = new StatsService();
         long[] totalSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
@@ -70,5 +70,5 @@ class StatsServiceTest {
         int actual = service.minSales(totalSales);
 
         assertEquals(expected, actual);
-   }
+    }
 }
