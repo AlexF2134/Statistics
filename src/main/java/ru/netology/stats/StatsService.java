@@ -61,7 +61,7 @@ public class StatsService {
             }
             month = month + 1;
         }
-        return totalMonths + 1;
+        return totalMonths;
     }
 
 
@@ -76,6 +76,6 @@ public class StatsService {
             }
             month = month + 1;
         }
-        return totalMonths + 1;
+        return totalMonths;
     }
 }
