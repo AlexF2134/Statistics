@@ -53,9 +53,8 @@ public class StatsService {
     public int monthLowerAverage(int[] sales) {
         int totalMonths = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
-        int findAverage = 0;
+        int findAverage = (calculateSum(sales) / sales.length);
         for (long sale : sales) {
-            findAverage = calculateSum(sales) / sales.length;
             if (sale < findAverage) {
                 totalMonths = totalMonths + 1;
             }
@@ -68,9 +67,8 @@ public class StatsService {
     public int monthHigherAverage(int[] sales) {
         int totalMonths = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
-        int findAverage = 0;
+        int findAverage = (calculateSum(sales) / sales.length);
         for (long sale : sales) {
-            findAverage = calculateSum(sales) / sales.length;
             if (sale > findAverage) {
                 totalMonths = totalMonths + 1;
             }
